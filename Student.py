@@ -36,20 +36,17 @@ class StudentRecords:
         return student
 
 
-if _name_ == "_main_":
+if __name__ == "__main__": 
     records = StudentRecords()
 
-    
-    id = input("Enter Student ID: ")
+    sid = input("Enter Student ID: ")
     name = input("Enter Student Name: ")
     email = input("Enter Email: ")
 
-   
-    student = records.add_student(id, name, email, {})
+    student = records.add_student(sid, name, email, {})
 
-    
     while True:
-        subj = input("\nEnter subject: ")
+        subj = input("\nEnter subject (leave empty to finish): ")
         if subj == "":
             break
 
